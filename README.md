@@ -1,0 +1,3 @@
+This example demonstrates a subtle issue in Scala when converting a mutable `ListBuffer` to an immutable `List` using the `toList()` method.  The `toList()` method creates a *copy* of the `ListBuffer`'s contents at the time of the conversion.  Any subsequent modifications to the `ListBuffer` will not be reflected in the immutable `List`.
+
+This can lead to unexpected behavior if you expect the immutable `List` to remain a live view of the `ListBuffer`.
